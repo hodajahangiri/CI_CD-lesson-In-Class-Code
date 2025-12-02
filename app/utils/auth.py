@@ -3,9 +3,10 @@ from jose import jwt
 import jose
 from functools import wraps
 from flask import request, jsonify
+import os
 
-
-SECRET_KEY = 'super secret secrets' # We don't push it to Github 
+#  Grabbing my secret_key from a file which is hide
+SECRET_KEY = os.environ.get('SECRET_KEY') or 'super secret secrets' # We don't push it to Github 
 
 def encode_token(user_id, role="user"):
     payload = {

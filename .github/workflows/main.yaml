@@ -66,8 +66,8 @@ jobs: #The actions
           echo "Contents of site-packages: (ls -l venv/lib/python*/site-packages)"
 
       - name: Run tests
-        run: python -m unittest discover -s tests -p 'test_*.py' #Running all test files inside my test folder al long as the file starts with tests_ and end with .py
+        run: python -m unittest discover -s tests -p 'test_*.py' #Running all test files inside my test folder al long as the file starts with tests_(something).py
+  # CI Completed
 
 
-
-
+  
