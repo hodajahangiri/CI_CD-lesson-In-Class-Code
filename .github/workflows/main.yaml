@@ -70,7 +70,7 @@ jobs: #The actions
   # CI Completed
 
   deploy:
-    needs: test#We need the test job to complete before we deploy
+    needs: test  #We need the test job to complete before we deploy
     runs-on: ubuntu-latest
 
     steps:
